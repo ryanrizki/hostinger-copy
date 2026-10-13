@@ -19,3 +19,4 @@ Project rules and running notes. Read before every task. Add a line when a mista
 - 2026-10-13: Never push without asking the user first.
 - 2026-10-13: Caught myself writing "AI draft had X, human fixed it" notes for drafts that never existed. Logs record only what really happened. Unreviewed = say "pending".
 - 2026-10-13: Cloudflare: never use the global Wrangler login (belongs to another account). Always `export XDG_CONFIG_HOME="$PWD/.wrangler-home"` before any wrangler login/deploy, then `wrangler whoami` to confirm.
+- 2026-10-13: Project-local Wrangler account = ryanxxrizki@gmail.com (verified with `whoami`). Global login is a different account, leave it alone.

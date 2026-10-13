@@ -20,4 +20,4 @@ Drafted by AI from [PRD.md](PRD.md) + [ARCHITECTURE.md](ARCHITECTURE.md), then r
 - Tests run against `wrangler pages dev dist`, not `astro preview`, because only Wrangler serves `functions/` and the signup API must be tested for real.
 - Testimonials use CSS scroll-snap, no carousel library (PRD US-2).
 
-Human review of this plan: _pending, add your edits here._
+Human review of this plan: reviewed and approved by Ryan Rizki, 2026-10-13. No changes requested.

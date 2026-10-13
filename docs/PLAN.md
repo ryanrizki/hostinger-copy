@@ -22,7 +22,7 @@ Updated with every commit.
 - [x] Design system via skill (`docs/DESIGN_SYSTEM.md`)
 
 ## AI workflow
-- [x] AI drafts implementation plan from PRD (`docs/IMPLEMENTATION_PLAN.md`), human review pending
+- [x] AI drafts implementation plan from PRD (`docs/IMPLEMENTATION_PLAN.md`), reviewed by Ryan
 - [x] Tasks split into small slices
 - [x] Ponytail review on each code change
 
@@ -35,7 +35,7 @@ Updated with every commit.
 - [x] Playwright tests (3, run against `wrangler pages dev`)
 
 ## Deploy
-- [ ] Cloudflare Pages + GitHub integration (config ready; needs owner to connect account)
+- [ ] Cloudflare Pages + GitHub integration (Wrangler logged in as ryanxxrizki, project-local; deploy pending)
 - [x] `docs/DEPLOYMENT.md`
 
 ## Wrap-up
