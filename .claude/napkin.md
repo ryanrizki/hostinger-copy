@@ -14,4 +14,4 @@ Project rules and running notes. Read before every task. Add a line when a mista
 
 ## Notes / corrections
 
-- 2026-10-13: Local gh account `gablooge` has no push access to `ryanrizki/hostinger-copy`. Push needs ryanrizki account or collaborator invite.
+- 2026-10-13: Push via gh account `ryanrizki` (`gh auth switch` if another account is active). Repo git identity = Ryan Rizki noreply; global identity untouched.

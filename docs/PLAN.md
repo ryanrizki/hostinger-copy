@@ -5,7 +5,7 @@ Updated with every commit.
 ## Setup
 - [x] Repo, git, remote
 - [x] Napkin rules, CLAUDE.md, plan, AI log
-- [ ] Push access to `ryanrizki/hostinger-copy`
+- [x] Push access to `ryanrizki/hostinger-copy`
 
 ## Discovery
 - [ ] Page breakdown per section (`docs/PAGE_BREAKDOWN.md`)
