@@ -2,8 +2,10 @@
 import '../styles/global.css';
 import c from '../content/id.json';
 import Hero from '../components/Hero.astro';
+import Testimonials from '../components/Testimonials.astro';
 import Steps from '../components/Steps.astro';
 import Benefits from '../components/Benefits.astro';
+import Faq from '../components/Faq.astro';
 ---
 <!doctype html>
 <html lang="id">
@@ -31,8 +33,10 @@ import Benefits from '../components/Benefits.astro';
 
     <main id="main">
       <Hero {...c.hero} />
+      <Testimonials {...c.testimonials} />
       <Steps {...c.steps} />
       <Benefits {...c.benefits} />
+      <Faq {...c.faq} />
     </main>
 
     <footer class="border-t border-line">

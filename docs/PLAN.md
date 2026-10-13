@@ -28,7 +28,7 @@ Updated with every commit.
 
 ## Build
 - [x] Astro + Tailwind scaffold
-- [ ] Sections: Hero ✅, Steps ✅, Benefits ✅, Testimonials, FAQ, Footer ✅
+- [x] Sections: Hero, Testimonials, Steps, Benefits, FAQ, Footer
 - [x] Content in `src/content/id.json`
 - [ ] Signup form + `functions/api/signup.ts`
 - [ ] Responsive, a11y, SEO meta
