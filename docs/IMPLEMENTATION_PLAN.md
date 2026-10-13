@@ -21,3 +21,17 @@ Drafted by AI from [PRD.md](PRD.md) + [ARCHITECTURE.md](ARCHITECTURE.md), then r
 - Testimonials use CSS scroll-snap, no carousel library (PRD US-2).
 
 Human review of this plan: reviewed and approved by Ryan Rizki, 2026-10-13. No changes requested.
+
+## v2: match source layout (2026-10-14)
+
+Triggered by [COMPARISON.md](COMPARISON.md). Decision: [ADR 0006](adr/0006-match-source-layout.md).
+
+| # | Slice | Done when |
+|---|-------|-----------|
+| 10 | Measure source with Playwright (computed styles, boxes) | Tokens + sizes recorded in DESIGN_SYSTEM v2 |
+| 11 | Tokens, Base layout, Header, Footer, `/faq`, `/daftar` | 3 pages build |
+| 12 | Rebuild sections in source order (hero → final band) | `npm run compare` side by side matches section for section |
+| 13 | Tests for new routes | 3 tests green |
+| 14 | Docs: PRD, architecture, ADR 0006, comparison | Reviewed |
+
+Reviewed by Ryan Rizki: _pending_.

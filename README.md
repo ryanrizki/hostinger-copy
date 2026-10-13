@@ -1,4 +1,4 @@
-Take-home assessment: rebuild the structure of Hostinger's Indonesian affiliate landing page (`/id/afiliasi`). The point is the process (AI use, system design, documentation), not pixel matching. Brand, copy and people are fictional; no Hostinger assets are used.
+Take-home assessment: rebuild Hostinger's Indonesian affiliate landing page (`/id/afiliasi`). Layout, spacing, colors and type match the source 1:1 (measured with Playwright); brand, copy, illustrations and partner names are our own, and no Hostinger assets are used. The point is the process: AI use, system design, documentation.
 
 **Live:** https://hostinger-copy.pages.dev
 
@@ -25,7 +25,7 @@ Requires Node ≥ 22.12.
 | [DISCOVERY](docs/DISCOVERY.md) | Page breakdown, problem statement, assumptions, open questions |
 | [PRD](docs/PRD.md) | Goals, users, stories + acceptance criteria, NFRs, metrics, scope |
 | [ARCHITECTURE](docs/ARCHITECTURE.md) | System, data flow, component tree, signup sequence |
-| [ADRs](docs/adr/) | 5 decisions with options and trade-offs |
+| [ADRs](docs/adr/) | 6 decisions with options and trade-offs |
 | [DESIGN_SYSTEM](docs/DESIGN_SYSTEM.md) | Tokens, type, components, a11y rules, what the AI skill suggested vs kept |
 | [COMPARISON](docs/COMPARISON.md) | Side-by-side gaps between source and clone, from screenshots |
 | [IMPLEMENTATION_PLAN](docs/IMPLEMENTATION_PLAN.md) | 9 vertical slices, one commit each |
@@ -41,7 +41,10 @@ Requires Node ≥ 22.12.
 ## Structure
 
 ```
-src/pages/index.astro        page shell, head/meta, header, footer
+src/layouts/Base.astro       head/meta, header, footer (shared by 3 pages)
+src/pages/index.astro        landing, same section order as the source
+src/pages/faq.astro          FAQ (linked from the FAQ band)
+src/pages/daftar.astro       signup form (all signup CTAs link here)
 src/components/*.astro       one per section
 src/content/id.json          all copy (i18n-ready)
 src/lib/validate.ts          signup rules, shared by form + API

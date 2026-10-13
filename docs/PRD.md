@@ -24,31 +24,39 @@ Turn a visiting creator into a registered affiliate. One page, one action: sign 
 ## 4. User stories + acceptance criteria
 
 **US-1 Value at a glance**: As a visitor, I see what the program offers within the first screen.
-- [ ] Hero shows program name, one-line value prop, commission figure, primary CTA
+- [ ] Hero shows program name, one-line value prop, primary CTA → `/daftar` (layout as source; commission % shown in step 4)
 - [ ] Hero fits in 1 viewport at 375×667 and 1440×900
 
 **US-2 Trust**: As a visitor, I see that other partners are paid and happy.
-- [ ] ≥3 testimonial cards with name, role, quote
-- [ ] Horizontal scroll on mobile with native scroll-snap; no JS carousel
+- [ ] 3 testimonial cards: quote icon, quote, partner name (fictional)
+- [ ] Desktop 3-column grid; mobile one card at a time with scroll-snap + dot pager
 
 **US-3 How it works**: As a visitor, I understand the steps to start earning.
 - [ ] 4 numbered steps, each with title + one sentence
 - [ ] Step 4 states the starting commission from content data
+- [ ] Signup button below the steps → `/daftar`
 
 **US-4 Why join**: As a visitor, I see why this program beats others.
-- [ ] 3 benefit items, icon + title + sentence
+- [ ] Two columns: 3 benefit items (icon + title + sentence) and an illustration; stacked on mobile
 
-**US-5 Questions answered**: As a visitor, I can get answers without leaving the page.
-- [ ] FAQ accordion, ≥5 items, native `<details>`, keyboard operable
+**US-5 Questions answered**: As a visitor, I can find answers to common questions.
+- [ ] Landing page: dark FAQ band with button → `/faq` (as source)
+- [ ] `/faq`: ≥5 items, native `<details>`, keyboard operable, link back
 
-**US-6 Sign up**: As a visitor, I can register from the page.
+**US-6 Sign up**: As a visitor, I can register from the site (`/daftar`).
 - [ ] Form: name (required), email (required, valid), website/channel URL (optional, valid URL), agree-to-terms checkbox (required)
 - [ ] Client-side validation with inline error text tied via `aria-describedby`
 - [ ] POST `/api/signup` → 200 shows success message; 400 shows field errors from server; network/5xx shows retry message
 - [ ] Submit button disabled while sending
-- [ ] Every CTA on the page scrolls to the form
+- [ ] Every signup CTA on the landing page links to `/daftar` (source links to an external portal)
+
+**US-7 Promo material + program terms**: As a visitor, I see that promo assets and clear rules exist.
+- [ ] Media section: title, line, outline button, video slot
+- [ ] Terms section: illustration + title + text + button, two columns
 
 ## 5. Content
+
+Layout matches the source 1:1; content is our own ([ADR 0006](adr/0006-match-source-layout.md)).
 
 All copy lives in `src/content/id.json`. No string in components. Brand name, commission %, testimonials, steps, benefits, FAQ: all data.
 
@@ -70,7 +78,7 @@ All copy lives in `src/content/id.json`. No string in components. Brand name, co
 
 ## 8. Scope
 
-**In v1:** sections above, mocked signup API, Cloudflare Pages deploy, 3 Playwright tests.
+**In v1:** landing page matching the source layout, `/faq`, `/daftar` with mocked signup API, Cloudflare Pages deploy, 3 Playwright tests.
 **Later:** store signups in KV/D1, Turnstile bot check, English locale, analytics events, A/B test hero copy.
 
 ## 9. Risks

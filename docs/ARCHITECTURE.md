@@ -21,27 +21,38 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-  J[src/content/id.json] --> P[src/pages/index.astro]
-  P --> C1[Hero] & C2[Testimonials] & C3[Steps] & C4[Benefits] & C5[Faq] & C6[SignupForm]
-  P --> H[dist/index.html]
+  J[src/content/id.json] --> B[layouts/Base.astro<br/>head, Header, Footer]
+  J --> I[pages/index.astro] & F[pages/faq.astro] & D[pages/daftar.astro]
+  B --> I & F & D
+  I --> H[dist/index.html] 
+  F --> H2[dist/faq.html]
+  D --> H3[dist/daftar.html]
 ```
 
-Content is one JSON file imported by the page and passed down as props. Components hold layout only, no copy. A second locale = `en.json` + one route.
+Content is one JSON file passed down as props. Components hold layout only, no copy. A second locale = `en.json` + routes. Pages build as flat files (`faq.html`) so Cloudflare serves `/faq` without a redirect.
 
-## Component tree
+## Pages and component tree
 
 ```
-index.astro            layout shell: <html lang>, meta, header, main, footer
-├─ Hero                h1, value prop, commission badge, CTA → #daftar
-├─ Testimonials        scroll-snap row of cards
-├─ Steps               4 numbered steps
-├─ Benefits            3 items
-├─ Faq                 <details> list
-├─ SignupForm          form + inline <script> for validation + fetch
-└─ (footer inline)     links, disclaimer
+layouts/Base.astro       <html lang>, meta, skip link, Header, Footer   (used by 3 pages)
+├─ Header                nav: logo, 5 menus (<details> dropdowns), language, account; mobile hamburger
+└─ Footer                breadcrumb, 6 columns (<details> on mobile), socials, payments, legal
+
+pages/index.astro        landing, same section order as source
+├─ Hero                  H1, line, CTA → /daftar
+├─ Testimonials          3 cards; mobile scroll-snap + dot pager (tiny IntersectionObserver)
+├─ Steps                 4 centered steps + CTA → /daftar
+├─ Benefits              2 columns: list + SVG illustration
+├─ Band (FAQ)            dark band, button → /faq
+├─ Media                 outline button + video slot
+├─ Terms                 2 columns: SVG illustration + text + button
+└─ Band (final CTA)      dark band, button → /daftar
+
+pages/faq.astro          Faq: <details> list
+pages/daftar.astro       SignupForm: form + inline script (validation, fetch)
 ```
 
-Components are added only when used more than once or when they hold real logic. Header/footer live inline in the page.
+Section components exist because each is a content boundary (one JSON key in, markup out). Band is reused twice; Logo in header and footer.
 
 ## Signup flow
 
@@ -70,7 +81,8 @@ Validation rules live in one place, `src/lib/validate.ts`, imported by both the 
 
 ```
 src/
-  pages/index.astro
+  layouts/Base.astro
+  pages/index.astro, faq.astro, daftar.astro
   components/*.astro
   content/id.json
   lib/validate.ts

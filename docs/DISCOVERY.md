@@ -47,10 +47,10 @@ Source height: ~5460px desktop, ~5660px mobile.
 
 1. Language: Bahasa Indonesia only for v1; content in a JSON file so a second locale is a file copy.
 2. Brand: placeholder brand **"AwanHost"** (fictional), own logo text, own copy. No Hostinger assets.
-3. Signup: original CTA leaves to an external portal. Clone uses an **on-page form (name, email, website/channel)** posting to a mock API, so there is a real flow to design and test.
-4. Testimonials: fictional people, placeholder avatars (initials), clearly sample data.
+3. Signup: original CTA leaves to an external portal. Clone CTAs go to **`/daftar`**, which hosts a form (name, email, website/channel) posting to a mock API, so there is a real flow to design and test.
+4. Testimonials: fictional partner names as text wordmarks, own quotes, clearly sample data.
 5. Commission number (40%) kept as example data in JSON, not hardcoded.
-6. FAQ, media and terms: source uses link-out sections. Clone currently has an FAQ accordion and no media/terms sections. **Pending decision**, see [COMPARISON.md](COMPARISON.md).
+6. FAQ, media and terms: built as on the source (FAQ band → `/faq`, media + terms sections). Decided 2026-10-14, [ADR 0006](adr/0006-match-source-layout.md).
 7. Cookie banner: out of scope (no tracking cookies used).
 8. Static page; only the signup endpoint runs server-side.
 
