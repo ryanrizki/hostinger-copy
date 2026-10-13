@@ -1,0 +1,8 @@
+---
+import Base from '../layouts/Base.astro';
+import SignupForm from '../components/SignupForm.astro';
+import c from '../content/id.json';
+---
+<Base title={c.signup.title}>
+  <SignupForm {...c.signup} />
+</Base>

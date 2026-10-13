@@ -1,0 +1,55 @@
+---
+import Logo from './Logo.astro';
+type F = typeof import('../content/id.json')['footer'];
+interface Props { footer: F; brand: string }
+const { footer: f, brand } = Astro.props;
+---
+<footer class="bg-card text-sm text-ink">
+  <div class="wrap pb-8 pt-10 md:pt-12">
+    <nav aria-label="Breadcrumb" class="flex items-center gap-2">
+      <a href="/" class="hover:underline">{brand}</a>
+      <span aria-hidden="true">›</span>
+      <span>{f.crumb}</span>
+    </nav>
+
+    <div class="mt-8 grid md:grid-cols-6 md:gap-6">
+      {f.columns.map((col) => (
+        <details class="foot-col border-b border-line md:border-0">
+          <summary class="flex cursor-pointer list-none items-center justify-between py-4 text-base font-semibold uppercase md:cursor-default md:pb-3 md:pt-0 [&::-webkit-details-marker]:hidden">
+            {col.title}
+            <span aria-hidden="true" class="text-xl md:hidden">+</span>
+          </summary>
+          <ul class="space-y-2 pb-4">
+            {col.links.map((l) => <li><a href="#" class="hover:underline">{l}</a></li>)}
+          </ul>
+        </details>
+      ))}
+    </div>
+
+    <div class="mt-10 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+      <Logo brand={brand} dark />
+      <ul class="flex flex-wrap gap-2" aria-label="Media sosial">
+        {f.social.map((s) => (
+          <li><a href="#" aria-label={s} class="grid size-8 place-items-center rounded-full bg-ink text-xs font-bold text-white">{s[0]}</a></li>
+        ))}
+      </ul>
+    </div>
+
+    <ul class="mt-6 flex flex-wrap gap-2" aria-label="Metode pembayaran">
+      {f.payments.map((p) => <li class="rounded-md border border-line bg-white px-3 py-1 text-xs font-semibold">{p}</li>)}
+    </ul>
+
+    <ul class="mt-6 flex flex-wrap gap-x-6 gap-y-2">
+      {f.legal.map((l) => <li><a href="#" class="hover:underline">{l}</a></li>)}
+    </ul>
+
+    <p class="mt-6 text-muted">© 2026 {brand}. {f.disclaimer}</p>
+  </div>
+</footer>
+
+<style>
+  /* Columns collapse into accordions on mobile, always open on desktop (older browsers: still toggleable). */
+  @media (min-width: 768px) {
+    .foot-col::details-content { content-visibility: visible; display: block; }
+  }
+</style>

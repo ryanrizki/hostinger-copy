@@ -36,8 +36,8 @@ Updated with every commit.
 
 ## Visual parity
 - [x] Screenshot-first method + `npm run compare` (`docs/COMPARISON.md`)
-- [ ] Decide FAQ: dark band (match) vs accordion (keep)
-- [ ] Close gaps 1–11 in COMPARISON.md, re-run compare after each
+- [x] Decide FAQ: dark band like source (user); accordion moved to `/faq`
+- [x] Close gaps 1–11: layout rebuilt to match source; signup form moved to `/daftar`
 
 ## Deploy
 - [x] Cloudflare Pages deploy (direct upload as ryanxxrizki): https://hostinger-copy.pages.dev

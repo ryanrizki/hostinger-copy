@@ -2,13 +2,13 @@
 type Props = typeof import('../content/id.json')['faq'];
 const f = Astro.props;
 ---
-<section class="py-16 md:py-24" aria-labelledby="faq">
+<section class="section" aria-labelledby="faq">
   <div class="mx-auto max-w-3xl px-4">
-    <h2 id="faq" class="text-center text-3xl font-bold md:text-4xl">{f.title}</h2>
+    <h1 id="faq" class="h2 text-center">{f.title}</h1>
     <div class="mt-10 divide-y divide-line border-y border-line">
       {f.items.map((i) => (
         <details class="group">
-          <summary class="flex min-h-12 cursor-pointer list-none items-center justify-between gap-4 py-4 font-semibold [&::-webkit-details-marker]:hidden">
+          <summary class="flex min-h-12 cursor-pointer list-none items-center justify-between gap-4 py-4 font-semibold text-ink [&::-webkit-details-marker]:hidden">
             {i.q}
             <svg aria-hidden="true" class="size-5 shrink-0 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" /></svg>
           </summary>
@@ -16,5 +16,6 @@ const f = Astro.props;
         </details>
       ))}
     </div>
+    <p class="mt-10 text-center"><a href="/" class="text-brand underline-offset-4 hover:underline">← {f.back}</a></p>
   </div>
 </section>

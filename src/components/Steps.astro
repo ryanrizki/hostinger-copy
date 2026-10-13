@@ -2,17 +2,18 @@
 type Props = typeof import('../content/id.json')['steps'];
 const s = Astro.props;
 ---
-<section class="py-16 md:py-24" aria-labelledby="langkah">
-  <div class="mx-auto max-w-6xl px-4">
-    <h2 id="langkah" class="text-center text-3xl font-bold md:text-4xl">{s.title}</h2>
-    <ol class="mt-10 grid gap-8 md:grid-cols-4">
+<section class="section" aria-labelledby="langkah">
+  <div class="wrap text-center">
+    <h2 id="langkah" class="h2">{s.title}</h2>
+    <ol class="mt-10 grid gap-8 md:mt-12 md:grid-cols-4 md:gap-6">
       {s.items.map((i, n) => (
         <li>
-          <span aria-hidden="true" class="grid size-10 place-items-center rounded-full bg-brand-tint font-bold text-brand-strong">{n + 1}</span>
-          <h3 class="mt-4 text-lg font-semibold">{i.title}</h3>
-          <p class="mt-2 text-muted">{i.text}</p>
+          <p aria-hidden="true" class="text-xl font-semibold leading-7 text-brand md:text-2xl md:leading-8">{n + 1}</p>
+          <h3 class="mt-4 text-lg font-semibold leading-[26px] text-ink">{i.title}</h3>
+          <p class="mt-2">{i.text}</p>
         </li>
       ))}
     </ol>
+    <a href="/daftar" class="btn mt-10 w-full md:mt-12 md:w-auto">{s.cta}</a>
   </div>
 </section>

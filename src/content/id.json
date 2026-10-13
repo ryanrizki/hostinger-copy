@@ -1,68 +1,89 @@
 {
   "meta": {
-    "title": "Program Afiliasi AwanHost: Komisi mulai 40%",
-    "description": "Rekomendasikan hosting AwanHost ke audiens Anda dan dapatkan komisi mulai 40% untuk setiap penjualan. Gratis bergabung."
+    "title": "Program Afiliasi AwanHost",
+    "description": "Gabung program afiliasi AwanHost secara gratis dan dapatkan komisi mulai 40% dari setiap penjualan yang Anda rekomendasikan."
   },
   "brand": "AwanHost",
-  "nav": { "cta": "Gabung" },
+  "nav": {
+    "items": [
+      { "label": "Harga", "href": "#" },
+      { "label": "Produk", "links": ["Web hosting", "Cloud hosting", "VPS", "Domain", "Email bisnis"] },
+      { "label": "Solusi", "links": ["Toko online", "Blog", "Portofolio", "Agensi"] },
+      { "label": "Developer", "links": ["API", "Dokumentasi", "Status layanan"] },
+      { "label": "Informasi", "links": ["Blog", "Tutorial", "Program afiliasi", "Tentang kami"] }
+    ],
+    "lang": "ID",
+    "account": "Akun"
+  },
   "hero": {
-    "eyebrow": "Program Afiliasi",
-    "title": "Ubah rekomendasi hosting jadi penghasilan",
-    "subtitle": "Bagikan link AwanHost ke audiens Anda dan terima komisi untuk setiap pembelian. Gratis bergabung, tanpa target minimum.",
-    "commission": "Komisi mulai 40%",
-    "cta": "Gabung sekarang",
-    "facts": ["Daftar kurang dari 1 menit", "Pembayaran setiap bulan", "Cookie referral 30 hari"]
+    "title": "Program Afiliasi AwanHost",
+    "subtitle": "Rekomendasikan hosting kami ke audiens Anda dan terima komisi dari setiap penjualan. Gratis bergabung!",
+    "cta": "Daftar jadi afiliasi"
   },
   "testimonials": {
     "title": "Kata partner kami",
     "items": [
-      {
-        "name": "Dimas Pratama",
-        "role": "Pengulas teknologi, YouTube",
-        "quote": "Penonton saya sering bertanya soal hosting. Sekarang setiap rekomendasi itu ikut menghasilkan, dan laporannya mudah dibaca."
-      },
-      {
-        "name": "Sari Wulandari",
-        "role": "Blogger WordPress",
-        "quote": "Materi promosinya lengkap, jadi saya tinggal fokus menulis. Komisi selalu masuk sesuai jadwal."
-      },
-      {
-        "name": "Raka Mahendra",
-        "role": "Pendiri agensi web",
-        "quote": "Klien kami memang butuh hosting. Lewat dashboard, kami bisa memantau semua referral tanpa repot."
-      }
+      { "partner": "KabarTekno", "quote": "Penonton saya sering bertanya soal hosting. Sekarang setiap rekomendasi itu ikut menghasilkan, dan laporannya mudah dibaca." },
+      { "partner": "UlasDigital", "quote": "Materi promosinya lengkap, jadi tim kami tinggal fokus membuat ulasan. Komisi selalu masuk sesuai jadwal." },
+      { "partner": "HematKode", "quote": "Klien kami memang butuh hosting. Lewat dashboard, kami bisa memantau semua referral tanpa repot." }
     ],
-    "note": "Testimoni contoh untuk keperluan studi."
+    "note": "Partner dan testimoni fiktif untuk keperluan studi."
   },
   "steps": {
-    "title": "Mulai dalam 4 langkah",
+    "title": "4 langkah mudah jadi afiliasi",
     "items": [
-      { "title": "Buat akun", "text": "Isi formulir singkat, verifikasi email, dan akun afiliasi Anda langsung aktif." },
-      { "title": "Pasang link", "text": "Ambil link unik dan banner siap pakai dari dashboard, lalu sisipkan di konten Anda." },
-      { "title": "Pantau hasil", "text": "Lihat klik, pendaftaran, dan penjualan secara langsung untuk tahu konten mana yang paling efektif." },
-      { "title": "Terima komisi", "text": "Dapatkan komisi mulai 40% dari setiap penjualan yang valid. Persentasenya naik seiring performa Anda." }
-    ]
+      { "title": "Buat akun", "text": "Isi formulir singkat dan verifikasi email. Akun afiliasi Anda langsung aktif." },
+      { "title": "Pasang link", "text": "Ambil link unik dan banner dari dashboard, lalu sisipkan di konten Anda." },
+      { "title": "Pantau hasil", "text": "Lihat klik, pendaftaran, dan penjualan secara langsung dari satu dashboard." },
+      { "title": "Terima komisi", "text": "Dapatkan komisi mulai 40% dari setiap penjualan valid, dan naik seiring performa Anda." }
+    ],
+    "cta": "Daftar afiliasi"
   },
   "benefits": {
-    "title": "Kenapa bergabung dengan AwanHost",
+    "title": "Program afiliasi yang berpihak pada Anda",
     "items": [
       { "icon": "trend", "title": "Konversi tinggi", "text": "Pengunjung yang Anda kirim mendarat di halaman yang dirancang untuk membeli, jadi klik lebih mudah berubah jadi komisi." },
-      { "icon": "percent", "title": "Naik seiring performa", "text": "Semakin banyak penjualan, semakin tinggi persentase komisi Anda. Tanpa batas atas." },
+      { "icon": "percent", "title": "Naik seiring performa", "text": "Semakin banyak penjualan, semakin tinggi persentase komisi Anda." },
       { "icon": "kit", "title": "Materi siap pakai", "text": "Banner, logo, dan contoh teks promosi tersedia di satu tempat dan bisa Anda sesuaikan." }
-    ]
+    ],
+    "card": { "label": "Klik bulan ini", "value": "2.315", "delta": "+18%", "payout": "Rp 12,4 jt", "payoutLabel": "Komisi dibayarkan" }
+  },
+  "faqBand": {
+    "title": "Pertanyaan seputar afiliasi",
+    "text": "Temukan jawaban tentang pendaftaran, komisi, dan aturan promosi.",
+    "cta": "Lihat FAQ",
+    "href": "/faq"
+  },
+  "media": {
+    "title": "Materi promosi",
+    "text": "Gunakan banner dan aset bermerek yang sudah kami siapkan untuk konten Anda.",
+    "cta": "Lihat semua materi",
+    "video": "Video: cara memasang link afiliasi pertama Anda"
+  },
+  "terms": {
+    "title": "Syarat Program Afiliasi",
+    "text": "Sebelum mendaftar, baca ketentuan program agar cara promosi Anda sesuai aturan.",
+    "cta": "Baca syarat",
+    "badge": "Disetujui"
+  },
+  "finalBand": {
+    "title": "Mulai hasilkan komisi hari ini",
+    "text": "Daftar gratis, pasang link pertama Anda, dan lihat komisinya bertambah.",
+    "cta": "Daftar afiliasi"
   },
   "faq": {
-    "title": "Pertanyaan umum",
+    "title": "Pertanyaan umum afiliasi",
     "items": [
       { "q": "Apakah ada biaya untuk bergabung?", "a": "Tidak. Pendaftaran dan penggunaan dashboard afiliasi gratis." },
       { "q": "Siapa yang boleh mendaftar?", "a": "Siapa saja yang punya website, blog, kanal video, atau media sosial dengan audiens yang relevan." },
       { "q": "Berapa lama cookie referral berlaku?", "a": "30 hari sejak pengunjung mengklik link Anda." },
       { "q": "Kapan komisi dibayarkan?", "a": "Setiap bulan, setelah masa validasi 30 hari untuk memastikan pesanan tidak dibatalkan." },
       { "q": "Bolehkah saya memasang iklan berbayar dengan nama merek?", "a": "Tidak untuk iklan di mesin pencari. Detail aturan promosi ada di syarat program." }
-    ]
+    ],
+    "back": "Kembali ke halaman afiliasi"
   },
   "signup": {
-    "title": "Siap mulai menghasilkan?",
+    "title": "Daftar jadi afiliasi",
     "subtitle": "Isi data di bawah. Kami kirim langkah berikutnya ke email Anda.",
     "fields": {
       "name": "Nama lengkap",
@@ -77,11 +98,18 @@
     "failed": "Gagal mengirim. Periksa koneksi Anda lalu coba lagi."
   },
   "footer": {
-    "links": [
-      { "label": "Syarat program", "href": "#" },
-      { "label": "Media afiliasi", "href": "#" },
-      { "label": "Kontak", "href": "#" }
+    "crumb": "Afiliasi",
+    "columns": [
+      { "title": "Hosting", "links": ["Web hosting", "Hosting WordPress", "Cloud hosting", "VPS", "Email hosting"] },
+      { "title": "Domain", "links": ["Cari domain", "Transfer domain", "SSL gratis"] },
+      { "title": "Tool", "links": ["Website builder", "Pembuat logo", "Migrasi website"] },
+      { "title": "Informasi", "links": ["Harga", "Blog", "Program afiliasi", "Status layanan"] },
+      { "title": "Perusahaan", "links": ["Tentang kami", "Karier", "Kontak"] },
+      { "title": "Bantuan", "links": ["Tutorial", "Pusat bantuan", "Hubungi kami"] }
     ],
+    "social": ["Instagram", "YouTube", "Facebook", "X", "TikTok"],
+    "payments": ["Visa", "Mastercard", "BCA", "QRIS", "GoPay"],
+    "legal": ["Kebijakan privasi", "Syarat layanan", "Kebijakan pengembalian dana"],
     "disclaimer": "Proyek studi. AwanHost adalah merek fiktif, bukan situs resmi penyedia hosting mana pun."
   }
 }

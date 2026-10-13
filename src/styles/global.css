@@ -1,36 +1,44 @@
 @import "tailwindcss";
 
-/* Tokens: see docs/DESIGN_SYSTEM.md */
+/* Tokens: measured from the source page, see docs/DESIGN_SYSTEM.md */
 @theme {
-  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
 
-  --color-ink: #0f172a;
-  --color-ink-soft: #1e1b4b;
-  --color-brand: #7c3aed;
-  --color-brand-strong: #6d28d9;
-  --color-brand-tint: #ede9fe;
-  --color-brand-on-dark: #c4b5fd;
-  --color-surface-alt: #f8fafc;
-  --color-muted: #475569;
-  --color-on-dark: #cbd5e1;
-  --color-line: #e2e8f0;
+  --color-night: #110c29;      /* nav + hero */
+  --color-band: #251951;       /* FAQ + final CTA bands */
+  --color-brand: #673de6;
+  --color-brand-strong: #5631c9;
+  --color-lavender: #e6e8ff;   /* benefits */
+  --color-lavender-soft: #f5f6ff; /* media */
+  --color-card: #f5f5f6;       /* testimonial cards, footer */
+  --color-ink: #18181a;        /* headings */
+  --color-body: #222225;
+  --color-muted: #4a4a55;
+  --color-on-dark: #f8f9fa;
+  --color-line: #dadce0;
   --color-danger: #b91c1c;
   --color-success: #15803d;
+
+  --container-page: 80rem;     /* 1280px content width */
 }
 
 @layer base {
   html { scroll-behavior: smooth; }
-  body { @apply bg-white text-ink font-sans leading-relaxed antialiased; }
+  body { @apply bg-white font-sans text-body antialiased; }
+  h1, h2 { @apply font-normal text-ink; }
   :focus-visible { @apply outline-2 outline-offset-2 outline-brand; }
+}
+
+@layer components {
+  .wrap { @apply mx-auto w-full max-w-page px-4 md:px-10 xl:px-0; }
+  .section { @apply py-12 md:py-20; }
+  .h2 { @apply text-[32px] leading-10 md:text-5xl md:leading-14; }
+  .btn {
+    @apply inline-flex min-h-12 cursor-pointer items-center justify-center rounded-xl bg-brand px-10 py-3 font-semibold text-white transition-colors hover:bg-brand-strong disabled:cursor-not-allowed disabled:opacity-50;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
-}
-
-@layer components {
-  .btn {
-    @apply inline-flex min-h-12 cursor-pointer items-center justify-center rounded-xl bg-brand px-6 font-semibold text-white transition-colors hover:bg-brand-strong hover:shadow-lg hover:shadow-brand/20 disabled:cursor-not-allowed disabled:opacity-50;
-  }
 }

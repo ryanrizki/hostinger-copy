@@ -1,0 +1,8 @@
+---
+import Base from '../layouts/Base.astro';
+import Faq from '../components/Faq.astro';
+import c from '../content/id.json';
+---
+<Base title={c.faq.title}>
+  <Faq {...c.faq} />
+</Base>
