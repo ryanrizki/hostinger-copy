@@ -40,5 +40,5 @@ Updated with every commit.
 
 ## Wrap-up
 - [x] README
-- [x] `docs/AI_REFLECTION.md` (candidate sections drafted; rewrite in own voice)
+- [x] `docs/AI_REFLECTION.md` (edited by Ryan)
 - [x] Trade-offs + future work (in README)

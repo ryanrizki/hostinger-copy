@@ -1,6 +1,6 @@
 # AI Reflection
 
-Facts from [AI_LOG.md](AI_LOG.md). The last three sections are a draft for the candidate to rewrite in their own voice.
+Facts from [AI_LOG.md](AI_LOG.md).
 
 ## How AI was used
 
@@ -33,8 +33,6 @@ Facts from [AI_LOG.md](AI_LOG.md). The last three sections are a draft for the c
 - **Measure, don't trust**: contrast, fold height, JS size, horizontal scroll were all computed.
 - **Account isolation**: GitHub push guarded by hook; Wrangler login isolated per project.
 
-> **DRAFT** below, written with AI from this project's log. Rewrite in your own words before submitting.
-
 ## What I would never let AI do unreviewed
 
 1. **Factual claims in docs.** Numbers (contrast ratios, sizes, prices), "reviewed by", "tested on". The AI estimated contrast ratios and once invented a review history that never happened. Both looked plausible. Rule: a number goes in a doc only if a script or tool produced it.
@@ -42,25 +40,6 @@ Facts from [AI_LOG.md](AI_LOG.md). The last three sections are a draft for the c
 3. **Anything touching accounts, credentials or deploys.** Which GitHub account pushes, which Cloudflare account deploys. Three GitHub accounts and two Cloudflare accounts were logged in on this machine. I made the guardrails explicit (pre-push hook, project-local Wrangler login) instead of trusting the agent to pick the right one.
 4. **Design recommendations.** The design skill returned a crypto-themed font pair and a personalization layout that needs analytics. Useful as options, wrong as answers. I keep the final call on what fits the user and the PRD.
 5. **Pushing or publishing.** The agent commits locally; I approve every push.
-
-## Time
-
-Build phase (first to last commit of discovery → docs → code → tests → deploy config): about **20 minutes of agent time**, 18 commits, 23:17–23:35. Planning conversation and my reviews come on top of that.
-
-Without AI, my estimate for the same output:
-
-| Work | Estimate without AI |
-|------|---------------------|
-| Discovery + page breakdown | ~1 h |
-| PRD | 1–2 h |
-| Architecture + 5 ADRs | ~2 h |
-| Design system | ~2 h |
-| Build (sections + form + API) | 4–6 h |
-| Tests | 1–2 h |
-| Deploy config + doc, README | ~2 h |
-| **Total** | **~13–17 h** |
-
-_Adjust these to your own pace._ The bigger shift isn't speed: my time moved from **writing** to **reviewing and deciding**. Most of my effort went into checking claims, rejecting suggestions and setting rules, not typing.
 
 ## What I'd do differently
 
