@@ -39,7 +39,7 @@ Updated with every commit.
 - [x] Decide FAQ: dark band like source (user); accordion moved to `/faq`
 - [x] Close gaps 1–11: layout rebuilt to match source; signup form moved to `/daftar`
 
-- [x] Docs updated for v2 (DESIGN_SYSTEM v2, ADR 0006, PRD, ARCHITECTURE, COMPARISON)
+- [x] Docs updated for v2 (DESIGN_SYSTEM v2, ADR 0006, PRD, ARCHITECTURE, COMPARISON); v2 plan reviewed by Ryan
 - [x] Redeploy live site with v2 (verified live: `/`, `/faq`, `/daftar` 200, no redirects, API 200)
 
 ## Deploy
