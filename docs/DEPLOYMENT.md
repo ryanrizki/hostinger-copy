@@ -46,8 +46,12 @@ After that:
 
 ## Option B: Direct upload from a laptop
 
+Use a project-local Wrangler login so a different Cloudflare account already logged in on the machine is never used:
+
 ```bash
-npx wrangler login
+export XDG_CONFIG_HOME="$PWD/.wrangler-home"   # git-ignored; global ~/.config/.wrangler untouched
+npx wrangler login                              # sign in with YOUR Cloudflare account
+npx wrangler whoami                             # confirm the account before deploying
 npm run build
 npx wrangler pages deploy
 ```
