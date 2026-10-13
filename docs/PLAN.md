@@ -30,7 +30,7 @@ Updated with every commit.
 - [x] Astro + Tailwind scaffold
 - [x] Sections: Hero, Testimonials, Steps, Benefits, FAQ, Footer
 - [x] Content in `src/content/id.json`
-- [ ] Signup form + `functions/api/signup.ts`
+- [ ] Signup form + `functions/api/signup.ts` (API ✅, form pending)
 - [ ] Responsive, a11y, SEO meta
 - [ ] Playwright tests (2–3)
 
