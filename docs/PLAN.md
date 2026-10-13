@@ -13,8 +13,8 @@ Updated with every commit.
 - [x] Assumptions + open questions
 
 ## Product
-- [ ] PRD (`docs/PRD.md`)
-- [ ] Acceptance criteria per story
+- [x] PRD (`docs/PRD.md`)
+- [x] Acceptance criteria per story
 
 ## System design
 - [ ] Architecture doc + Mermaid diagrams (`docs/ARCHITECTURE.md`)
