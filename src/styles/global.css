@@ -28,3 +28,9 @@
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+
+@layer components {
+  .btn {
+    @apply inline-flex min-h-12 cursor-pointer items-center justify-center rounded-xl bg-brand px-6 font-semibold text-white transition-colors hover:bg-brand-strong hover:shadow-lg hover:shadow-brand/20 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+}

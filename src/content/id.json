@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "title": "Program Afiliasi AwanHost: Komisi mulai 40%",
+    "description": "Rekomendasikan hosting AwanHost ke audiens Anda dan dapatkan komisi mulai 40% untuk setiap penjualan. Gratis bergabung."
+  },
+  "brand": "AwanHost",
+  "nav": { "cta": "Gabung" },
+  "hero": {
+    "eyebrow": "Program Afiliasi",
+    "title": "Ubah rekomendasi hosting jadi penghasilan",
+    "subtitle": "Bagikan link AwanHost ke audiens Anda dan terima komisi untuk setiap pembelian. Gratis bergabung, tanpa target minimum.",
+    "commission": "Komisi mulai 40%",
+    "cta": "Gabung sekarang",
+    "facts": ["Daftar kurang dari 1 menit", "Pembayaran setiap bulan", "Cookie referral 30 hari"]
+  },
+  "testimonials": {
+    "title": "Kata partner kami",
+    "items": [
+      {
+        "name": "Dimas Pratama",
+        "role": "Pengulas teknologi, YouTube",
+        "quote": "Penonton saya sering bertanya soal hosting. Sekarang setiap rekomendasi itu ikut menghasilkan, dan laporannya mudah dibaca."
+      },
+      {
+        "name": "Sari Wulandari",
+        "role": "Blogger WordPress",
+        "quote": "Materi promosinya lengkap, jadi saya tinggal fokus menulis. Komisi selalu masuk sesuai jadwal."
+      },
+      {
+        "name": "Raka Mahendra",
+        "role": "Pendiri agensi web",
+        "quote": "Klien kami memang butuh hosting. Lewat dashboard, kami bisa memantau semua referral tanpa repot."
+      }
+    ],
+    "note": "Testimoni contoh untuk keperluan studi."
+  },
+  "steps": {
+    "title": "Mulai dalam 4 langkah",
+    "items": [
+      { "title": "Buat akun", "text": "Isi formulir singkat, verifikasi email, dan akun afiliasi Anda langsung aktif." },
+      { "title": "Pasang link", "text": "Ambil link unik dan banner siap pakai dari dashboard, lalu sisipkan di konten Anda." },
+      { "title": "Pantau hasil", "text": "Lihat klik, pendaftaran, dan penjualan secara langsung untuk tahu konten mana yang paling efektif." },
+      { "title": "Terima komisi", "text": "Dapatkan komisi mulai 40% dari setiap penjualan yang valid. Persentasenya naik seiring performa Anda." }
+    ]
+  },
+  "benefits": {
+    "title": "Kenapa bergabung dengan AwanHost",
+    "items": [
+      { "icon": "trend", "title": "Konversi tinggi", "text": "Pengunjung yang Anda kirim mendarat di halaman yang dirancang untuk membeli, jadi klik lebih mudah berubah jadi komisi." },
+      { "icon": "percent", "title": "Naik seiring performa", "text": "Semakin banyak penjualan, semakin tinggi persentase komisi Anda. Tanpa batas atas." },
+      { "icon": "kit", "title": "Materi siap pakai", "text": "Banner, logo, dan contoh teks promosi tersedia di satu tempat dan bisa Anda sesuaikan." }
+    ]
+  },
+  "faq": {
+    "title": "Pertanyaan umum",
+    "items": [
+      { "q": "Apakah ada biaya untuk bergabung?", "a": "Tidak. Pendaftaran dan penggunaan dashboard afiliasi gratis." },
+      { "q": "Siapa yang boleh mendaftar?", "a": "Siapa saja yang punya website, blog, kanal video, atau media sosial dengan audiens yang relevan." },
+      { "q": "Berapa lama cookie referral berlaku?", "a": "30 hari sejak pengunjung mengklik link Anda." },
+      { "q": "Kapan komisi dibayarkan?", "a": "Setiap bulan, setelah masa validasi 30 hari untuk memastikan pesanan tidak dibatalkan." },
+      { "q": "Bolehkah saya memasang iklan berbayar dengan nama merek?", "a": "Tidak untuk iklan di mesin pencari. Detail aturan promosi ada di syarat program." }
+    ]
+  },
+  "signup": {
+    "title": "Siap mulai menghasilkan?",
+    "subtitle": "Isi data di bawah. Kami kirim langkah berikutnya ke email Anda.",
+    "fields": {
+      "name": "Nama lengkap",
+      "email": "Email",
+      "website": "Website atau kanal",
+      "websiteHint": "Opsional, contoh: https://blogku.com",
+      "agree": "Saya setuju dengan syarat program afiliasi"
+    },
+    "submit": "Kirim pendaftaran",
+    "sending": "Mengirim…",
+    "success": "Terima kasih! Cek email Anda untuk langkah berikutnya.",
+    "failed": "Gagal mengirim. Periksa koneksi Anda lalu coba lagi."
+  },
+  "footer": {
+    "links": [
+      { "label": "Syarat program", "href": "#" },
+      { "label": "Media afiliasi", "href": "#" },
+      { "label": "Kontak", "href": "#" }
+    ],
+    "disclaimer": "Proyek studi. AwanHost adalah merek fiktif, bukan situs resmi penyedia hosting mana pun."
+  }
+}
