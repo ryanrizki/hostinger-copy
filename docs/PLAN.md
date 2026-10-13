@@ -19,7 +19,7 @@ Updated with every commit.
 ## System design
 - [x] Architecture doc + Mermaid diagrams (`docs/ARCHITECTURE.md`)
 - [x] ADRs (`docs/adr/`): stack, styling, content, hosting, validation
-- [ ] Design system via skill (`docs/DESIGN_SYSTEM.md`)
+- [x] Design system via skill (`docs/DESIGN_SYSTEM.md`)
 
 ## AI workflow
 - [ ] AI drafts implementation plan from PRD, reviewed + corrected
