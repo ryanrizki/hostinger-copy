@@ -24,14 +24,14 @@ Updated with every commit.
 ## AI workflow
 - [x] AI drafts implementation plan from PRD (`docs/IMPLEMENTATION_PLAN.md`), human review pending
 - [x] Tasks split into small slices
-- [ ] Ponytail review on each code change (running per slice)
+- [x] Ponytail review on each code change
 
 ## Build
 - [x] Astro + Tailwind scaffold
 - [x] Sections: Hero, Testimonials, Steps, Benefits, FAQ, Footer
 - [x] Content in `src/content/id.json`
 - [x] Signup form + `functions/api/signup.ts`
-- [ ] Responsive, a11y, SEO meta
+- [x] Responsive, a11y, SEO meta (no h-scroll 375/1440, hero fold measured)
 - [x] Playwright tests (3, run against `wrangler pages dev`)
 
 ## Deploy
@@ -39,6 +39,6 @@ Updated with every commit.
 - [x] `docs/DEPLOYMENT.md`
 
 ## Wrap-up
-- [ ] README
-- [ ] `docs/AI_REFLECTION.md`
-- [ ] Trade-offs + future work
+- [x] README
+- [x] `docs/AI_REFLECTION.md` (facts done; candidate sections pending)
+- [x] Trade-offs + future work (in README)
