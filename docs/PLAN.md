@@ -32,7 +32,7 @@ Updated with every commit.
 - [x] Content in `src/content/id.json`
 - [x] Signup form + `functions/api/signup.ts`
 - [ ] Responsive, a11y, SEO meta
-- [ ] Playwright tests (2–3)
+- [x] Playwright tests (3, run against `wrangler pages dev`)
 
 ## Deploy
 - [ ] Cloudflare Pages + GitHub integration
