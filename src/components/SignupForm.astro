@@ -1,0 +1,120 @@
+---
+type Props = typeof import('../content/id.json')['signup'];
+const s = Astro.props;
+const input = 'mt-2 block min-h-12 w-full rounded-xl border border-line bg-white px-4 text-ink aria-[invalid=true]:border-danger';
+---
+<section id="daftar" class="scroll-mt-4 bg-ink py-16 md:py-24" aria-labelledby="daftar-title">
+  <div class="mx-auto max-w-xl px-4">
+    <h2 id="daftar-title" class="text-center text-3xl font-bold text-white md:text-4xl">{s.title}</h2>
+    <p class="mt-3 text-center text-on-dark">{s.subtitle}</p>
+
+    <form
+      id="signup-form"
+      novalidate
+      class="mt-10 space-y-5 rounded-2xl bg-white p-6 md:p-8"
+      data-sending={s.sending}
+      data-success={s.success}
+      data-failed={s.failed}
+    >
+      <div>
+        <label for="name" class="font-semibold">{s.fields.name} <span aria-hidden="true" class="text-danger">*</span></label>
+        <input id="name" name="name" autocomplete="name" required aria-describedby="name-error" class={input} />
+        <p id="name-error" class="mt-1 text-sm text-danger"></p>
+      </div>
+      <div>
+        <label for="email" class="font-semibold">{s.fields.email} <span aria-hidden="true" class="text-danger">*</span></label>
+        <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error" class={input} />
+        <p id="email-error" class="mt-1 text-sm text-danger"></p>
+      </div>
+      <div>
+        <label for="website" class="font-semibold">{s.fields.website}</label>
+        <input id="website" name="website" type="url" autocomplete="url" aria-describedby="website-hint website-error" class={input} />
+        <p id="website-hint" class="mt-1 text-sm text-muted">{s.fields.websiteHint}</p>
+        <p id="website-error" class="mt-1 text-sm text-danger"></p>
+      </div>
+      <div>
+        <label class="flex items-start gap-3">
+          <input name="agree" type="checkbox" required aria-describedby="agree-error" class="mt-1 size-5 accent-brand" />
+          <span>{s.fields.agree} <span aria-hidden="true" class="text-danger">*</span></span>
+        </label>
+        <p id="agree-error" class="mt-1 text-sm text-danger"></p>
+      </div>
+
+      <button type="submit" class="btn w-full">{s.submit}</button>
+      <p data-status role="status" class="text-center font-semibold data-[state=err]:text-danger data-[state=ok]:text-success"></p>
+    </form>
+  </div>
+</section>
+
+<script>
+  import { validateSignup, type Errors, type Field } from '../lib/validate';
+
+  const form = document.querySelector<HTMLFormElement>('#signup-form')!;
+  const status = form.querySelector<HTMLElement>('[data-status]')!;
+  const button = form.querySelector<HTMLButtonElement>('button[type=submit]')!;
+  const fields: Field[] = ['name', 'email', 'website', 'agree'];
+  const el = (f: Field) => form.elements.namedItem(f) as HTMLInputElement;
+
+  const read = () => {
+    const d = new FormData(form);
+    return { name: d.get('name'), email: d.get('email'), website: d.get('website'), agree: d.get('agree') === 'on' };
+  };
+
+  function show(errors: Errors, only?: string) {
+    for (const f of fields) {
+      if (only && only !== f) continue;
+      document.getElementById(`${f}-error`)!.textContent = errors[f] ?? '';
+      if (errors[f]) el(f).setAttribute('aria-invalid', 'true');
+      else el(f).removeAttribute('aria-invalid');
+    }
+  }
+
+  function setStatus(text = '', state = '') {
+    status.textContent = text;
+    status.dataset.state = state;
+  }
+
+  // Validate a field once the user leaves it (text) or toggles it (checkbox).
+  form.addEventListener('focusout', (e) => {
+    const t = e.target as HTMLInputElement;
+    if (t.type !== 'checkbox' && t.value) show(validateSignup(read()), t.name);
+  });
+  form.addEventListener('change', (e) => {
+    const t = e.target as HTMLInputElement;
+    if (t.type === 'checkbox') show(validateSignup(read()), t.name);
+  });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = read();
+    let errors = validateSignup(data);
+    show(errors);
+    if (Object.keys(errors).length) return el(Object.keys(errors)[0] as Field).focus();
+
+    button.disabled = true;
+    setStatus(form.dataset.sending);
+    try {
+      const res = await fetch('/api/signup', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (res.status === 400) {
+        errors = (await res.json()).errors ?? {};
+        show(errors);
+        const first = Object.keys(errors)[0] as Field | undefined;
+        if (first) {
+          setStatus();
+          return el(first).focus();
+        }
+      }
+      if (!res.ok) throw new Error(String(res.status));
+      form.reset();
+      setStatus(form.dataset.success, 'ok');
+    } catch {
+      setStatus(form.dataset.failed, 'err');
+    } finally {
+      button.disabled = false;
+    }
+  });
+</script>
