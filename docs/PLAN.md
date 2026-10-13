@@ -22,8 +22,8 @@ Updated with every commit.
 - [x] Design system via skill (`docs/DESIGN_SYSTEM.md`)
 
 ## AI workflow
-- [ ] AI drafts implementation plan from PRD, reviewed + corrected
-- [ ] Tasks split into small slices
+- [x] AI drafts implementation plan from PRD (`docs/IMPLEMENTATION_PLAN.md`), human review pending
+- [x] Tasks split into small slices
 - [ ] Ponytail review on each code change
 
 ## Build

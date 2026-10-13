@@ -17,3 +17,4 @@ Project rules and running notes. Read before every task. Add a line when a mista
 - 2026-10-13: Push via gh account `ryanrizki` (`gh auth switch` if another account is active). Repo git identity = Ryan Rizki noreply; global identity untouched.
 - 2026-10-13: `.git/hooks/pre-push` blocks push unless active gh account is `ryanrizki`. Remote URL pinned to `ryanrizki@github.com`. Hook is local (not committed); recreate on fresh clone.
 - 2026-10-13: Never push without asking the user first.
+- 2026-10-13: Caught myself writing "AI draft had X, human fixed it" notes for drafts that never existed. Logs record only what really happened. Unreviewed = say "pending".
