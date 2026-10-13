@@ -24,10 +24,10 @@ Updated with every commit.
 ## AI workflow
 - [x] AI drafts implementation plan from PRD (`docs/IMPLEMENTATION_PLAN.md`), human review pending
 - [x] Tasks split into small slices
-- [ ] Ponytail review on each code change
+- [ ] Ponytail review on each code change (running per slice)
 
 ## Build
-- [ ] Astro + Tailwind scaffold
+- [x] Astro + Tailwind scaffold
 - [ ] Sections: Hero, HowItWorks, Commission, Benefits, FAQ, Footer
 - [ ] Content in `src/content/id.json`
 - [ ] Signup form + `functions/api/signup.ts`

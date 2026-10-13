@@ -14,7 +14,7 @@ flowchart LR
   CI -->|dist/ + functions/| CDN
 ```
 
-- Page is pre-rendered at build time (Astro `output: 'static'`). No server rendering.
+- Page is pre-rendered at build time (Astro default static output). No server rendering.
 - Only dynamic part: `POST /api/signup`, a Cloudflare Pages Function.
 
 ## Build-time data flow
@@ -22,7 +22,7 @@ flowchart LR
 ```mermaid
 flowchart LR
   J[src/content/id.json] --> P[src/pages/index.astro]
-  P --> C1[Hero] & C2[Testimonials] & C3[Steps] & C4[Benefits] & C5[Faq] & C6[SignupForm] & C7[Footer]
+  P --> C1[Hero] & C2[Testimonials] & C3[Steps] & C4[Benefits] & C5[Faq] & C6[SignupForm]
   P --> H[dist/index.html]
 ```
 

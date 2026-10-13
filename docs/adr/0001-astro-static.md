@@ -13,7 +13,7 @@ One marketing page. Mostly static text, one form. Needs components (to show stru
 | **Astro (static)** | Components, zero JS by default, first-class static build, works on Pages as-is | Less familiar to some reviewers |
 
 ## Decision
-Astro with `output: 'static'`. No UI framework integration (no React).
+Astro static build (the default output, no adapter). No UI framework integration (no React).
 
 ## Consequences
 - HTML-first, near-zero JS by default.

@@ -23,9 +23,9 @@ Generated with the `ui-ux-pro-max` skill (`--design-system`, then `--domain land
 | `brand-strong` | `#6D28D9` | Button hover | white 7.1:1 ✅ |
 | `brand-tint` | `#EDE9FE` | Badges, icon chips on light | brand-strong on tint 6.0:1 ✅ |
 | `brand-on-dark` | `#C4B5FD` | Accents, badge text on ink | 9.7:1 on ink ✅ |
-| `surface` | `#FFFFFF` | Page background | – |
+| `white` | `#FFFFFF` | Page background (Tailwind built-in) | – |
 | `surface-alt` | `#F8FAFC` | Alternating sections, cards | – |
-| `text` | `#0F172A` | Body on light | 17.9:1 ✅ |
+| `ink` (as text) | `#0F172A` | Body on light (same token as bg ink) | 17.9:1 ✅ |
 | `text-muted` | `#475569` | Secondary text on light | 7.6:1 (7.2 on surface-alt) ✅ |
 | `text-on-dark` | `#CBD5E1` | Body on ink | 12:1 ✅ |
 | `line` | `#E2E8F0` | Borders, dividers | decorative |
