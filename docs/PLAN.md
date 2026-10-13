@@ -32,7 +32,7 @@ Updated with every commit.
 - [x] Content in `src/content/id.json`
 - [x] Signup form + `functions/api/signup.ts`
 - [x] Responsive, a11y, SEO meta (no h-scroll 375/1440, hero fold measured)
-- [x] Playwright tests (3, run against `wrangler pages dev`)
+- [x] Playwright tests (3, run against `wrangler pages dev`; cover `/`, `/faq`, `/daftar`)
 
 ## Visual parity
 - [x] Screenshot-first method + `npm run compare` (`docs/COMPARISON.md`)
