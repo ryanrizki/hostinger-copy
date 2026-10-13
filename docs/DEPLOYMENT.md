@@ -97,6 +97,7 @@ Free tier covers this: unlimited static requests, 100k Function requests/day, 50
 | Symptom | Fix |
 |---------|-----|
 | Build fails with Node engine error | Check `.node-version` is committed (needs ≥ 22.12) |
+| `Your user email must been verified [code: 8000077]` | Verify the Cloudflare account email (Profile → resend verification), then retry |
 | `/api/signup` 404 on deployed site | `functions/` must be at repo root, not inside `src/` |
 | `/api/signup` 404 locally | You ran `npm run dev`; use `npm run preview` |
 | Form shows "Gagal mengirim" | Check Function logs; 413 = body > 10 KB, 5xx = runtime error |
@@ -105,4 +106,4 @@ Free tier covers this: unlimited static requests, 100k Function requests/day, 50
 
 - AI first proposed `wrangler pages dev dist` in scripts; moved the dir into `wrangler.jsonc` so one file is the source of truth.
 - Wrangler warned about the missing compatibility date during tests; pinned it in config.
-- Not yet verified against a live Cloudflare account: dashboard steps follow current Cloudflare docs but the first real deploy needs the owner's account.
+- Option B verified live on 2026-10-13: project created, deployed, `GET /` 200, `POST /api/signup` 200 valid / 400 invalid. Option A dashboard steps not yet exercised.

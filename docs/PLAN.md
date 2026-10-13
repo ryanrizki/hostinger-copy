@@ -35,7 +35,7 @@ Updated with every commit.
 - [x] Playwright tests (3, run against `wrangler pages dev`)
 
 ## Deploy
-- [ ] Cloudflare Pages + GitHub integration (Wrangler logged in as ryanxxrizki, project-local; deploy pending)
+- [x] Cloudflare Pages deploy (direct upload as ryanxxrizki): https://hostinger-copy.pages.dev
 - [x] `docs/DEPLOYMENT.md`
 
 ## Wrap-up

@@ -2,7 +2,7 @@
 
 Take-home assessment: rebuild the structure of Hostinger's Indonesian affiliate landing page (`/id/afiliasi`). The point is the process (AI use, system design, documentation), not pixel matching. Brand, copy and people are fictional; no Hostinger assets are used.
 
-**Live:** _pending first Cloudflare deploy_
+**Live:** https://hostinger-copy.pages.dev
 
 ## Stack
 
