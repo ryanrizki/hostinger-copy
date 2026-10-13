@@ -8,9 +8,9 @@ Updated with every commit.
 - [x] Push access to `ryanrizki/hostinger-copy`
 
 ## Discovery
-- [ ] Page breakdown per section (`docs/PAGE_BREAKDOWN.md`)
-- [ ] Problem statement
-- [ ] Assumptions + open questions
+- [x] Page breakdown per section (`docs/DISCOVERY.md`)
+- [x] Problem statement
+- [x] Assumptions + open questions
 
 ## Product
 - [ ] PRD (`docs/PRD.md`)
