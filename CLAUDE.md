@@ -6,3 +6,4 @@ Read `.claude/napkin.md` first. Its rules override defaults.
 
 - Plan: `docs/PLAN.md`
 - AI log: `docs/AI_LOG.md`
+- Visual check: `npm run compare` → `compare/*.png`; gaps in `docs/COMPARISON.md`

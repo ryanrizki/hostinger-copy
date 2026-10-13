@@ -23,6 +23,7 @@ Facts from [AI_LOG.md](AI_LOG.md).
 | 3 | `aria-invalid` set to `""` (screen readers read it as *valid*) + a Tailwind variant that doesn't exist, so error borders never showed | Self-review of the form, then checking built CSS | Set `"true"`, used arbitrary variant, verified in output |
 | 4 | Implementation plan included "AI draft vs human fix" notes about drafts that never existed | Re-reading before commit | Replaced with real decisions; napkin rule added |
 | 5 | Mobile hero spilled past the 375×667 fold (PRD US-1) | Measuring with Playwright, not eyeballing | Tightened padding, re-measured |
+| 7 | Built the clone from DOM text without ever looking at the rendered source page; layout drifted, 2 sections missing | User compared the two sites | Screenshot-first rule, `npm run compare`, COMPARISON.md |
 | 6 | Tried to read per-account GitHub tokens to pin push identity | Blocked by the agent's safety layer | Used a pre-push hook that checks the active account, no secrets touched |
 
 ## Guardrails that worked

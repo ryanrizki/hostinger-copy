@@ -1,5 +1,3 @@
-# AwanHost Affiliate Page (study clone)
-
 Take-home assessment: rebuild the structure of Hostinger's Indonesian affiliate landing page (`/id/afiliasi`). The point is the process (AI use, system design, documentation), not pixel matching. Brand, copy and people are fictional; no Hostinger assets are used.
 
 **Live:** https://hostinger-copy.pages.dev
@@ -15,6 +13,7 @@ npm install
 npm run dev        # UI only, http://localhost:4321
 npm run preview    # full site + /api/signup via Wrangler, http://localhost:8788
 npm test           # builds, starts Wrangler, runs Playwright
+npm run compare    # full-page screenshots: source vs clone → compare/
 ```
 
 Requires Node ≥ 22.12.
@@ -28,6 +27,7 @@ Requires Node ≥ 22.12.
 | [ARCHITECTURE](docs/ARCHITECTURE.md) | System, data flow, component tree, signup sequence |
 | [ADRs](docs/adr/) | 5 decisions with options and trade-offs |
 | [DESIGN_SYSTEM](docs/DESIGN_SYSTEM.md) | Tokens, type, components, a11y rules, what the AI skill suggested vs kept |
+| [COMPARISON](docs/COMPARISON.md) | Side-by-side gaps between source and clone, from screenshots |
 | [IMPLEMENTATION_PLAN](docs/IMPLEMENTATION_PLAN.md) | 9 vertical slices, one commit each |
 | [DEPLOYMENT](docs/DEPLOYMENT.md) | Cloudflare Pages: git integration, direct upload, rollback, troubleshooting |
 | [AI_LOG](docs/AI_LOG.md) | Every AI step: prompt, output, what was accepted/rejected/fixed |

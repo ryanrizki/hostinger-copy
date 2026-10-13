@@ -34,6 +34,11 @@ Updated with every commit.
 - [x] Responsive, a11y, SEO meta (no h-scroll 375/1440, hero fold measured)
 - [x] Playwright tests (3, run against `wrangler pages dev`)
 
+## Visual parity
+- [x] Screenshot-first method + `npm run compare` (`docs/COMPARISON.md`)
+- [ ] Decide FAQ: dark band (match) vs accordion (keep)
+- [ ] Close gaps 1–11 in COMPARISON.md, re-run compare after each
+
 ## Deploy
 - [x] Cloudflare Pages deploy (direct upload as ryanxxrizki): https://hostinger-copy.pages.dev
 - [x] `docs/DEPLOYMENT.md`

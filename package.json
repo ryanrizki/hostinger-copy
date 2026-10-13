@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "wrangler pages dev",
-    "test": "playwright test"
+    "test": "playwright test",
+    "compare": "node scripts/compare.mjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
