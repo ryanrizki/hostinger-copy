@@ -2,7 +2,7 @@
 
 How: `npm run compare` → `compare/source-*.png` vs `compare/clone-*.png` (1440 + 375). Screenshots are git-ignored (source images are Hostinger's content). Re-run after every visual change and update this table.
 
-Last run: 2026-10-14 (after v2 rebuild) · clone = local build via `wrangler pages dev`
+Last run: 2026-10-14 (after v2 redeploy) · clone = https://hostinger-copy.pages.dev (same heights as local build)
 
 | Height | Source | Clone |
 |--------|--------|-------|

@@ -40,7 +40,7 @@ Updated with every commit.
 - [x] Close gaps 1–11: layout rebuilt to match source; signup form moved to `/daftar`
 
 - [x] Docs updated for v2 (DESIGN_SYSTEM v2, ADR 0006, PRD, ARCHITECTURE, COMPARISON)
-- [ ] Redeploy live site with v2
+- [x] Redeploy live site with v2 (verified live: `/`, `/faq`, `/daftar` 200, no redirects, API 200)
 
 ## Deploy
 - [x] Cloudflare Pages deploy (direct upload as ryanxxrizki): https://hostinger-copy.pages.dev
