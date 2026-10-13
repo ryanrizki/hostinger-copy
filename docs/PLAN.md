@@ -17,8 +17,8 @@ Updated with every commit.
 - [x] Acceptance criteria per story
 
 ## System design
-- [ ] Architecture doc + Mermaid diagrams (`docs/ARCHITECTURE.md`)
-- [ ] ADRs (`docs/adr/`): stack, styling, content, hosting
+- [x] Architecture doc + Mermaid diagrams (`docs/ARCHITECTURE.md`)
+- [x] ADRs (`docs/adr/`): stack, styling, content, hosting, validation
 - [ ] Design system via skill (`docs/DESIGN_SYSTEM.md`)
 
 ## AI workflow
