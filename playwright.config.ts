@@ -5,7 +5,7 @@ export default defineConfig({
   use: { baseURL: 'http://localhost:8788' },
   // Wrangler, not `astro preview`: only Wrangler serves functions/ (the signup API).
   webServer: {
-    command: 'npm run build && npx wrangler pages dev dist --port 8788',
+    command: 'npm run build && npx wrangler pages dev --port 8788',
     url: 'http://localhost:8788',
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,

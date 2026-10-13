@@ -35,8 +35,8 @@ Updated with every commit.
 - [x] Playwright tests (3, run against `wrangler pages dev`)
 
 ## Deploy
-- [ ] Cloudflare Pages + GitHub integration
-- [ ] `docs/DEPLOYMENT.md`
+- [ ] Cloudflare Pages + GitHub integration (config ready; needs owner to connect account)
+- [x] `docs/DEPLOYMENT.md`
 
 ## Wrap-up
 - [ ] README
