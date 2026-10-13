@@ -1,0 +1,25 @@
+---
+type Props = typeof import('../content/id.json')['benefits'];
+const b = Astro.props;
+const icons: Record<string, string> = {
+  trend: 'M3 17l6-6 4 4 8-8M15 7h6v6',
+  percent: 'M19 5L5 19M7 9a2 2 0 100-4 2 2 0 000 4zM17 19a2 2 0 100-4 2 2 0 000 4z',
+  kit: 'M4 5h16v14H4zM4 15l5-5 4 4 3-3 4 4',
+};
+---
+<section class="bg-surface-alt py-16 md:py-24" aria-labelledby="manfaat">
+  <div class="mx-auto max-w-6xl px-4">
+    <h2 id="manfaat" class="text-center text-3xl font-bold md:text-4xl">{b.title}</h2>
+    <ul class="mt-10 grid gap-6 md:grid-cols-3">
+      {b.items.map((i) => (
+        <li class="rounded-2xl border border-line bg-white p-6 shadow-sm">
+          <span class="grid size-12 place-items-center rounded-xl bg-brand-tint text-brand-strong">
+            <svg aria-hidden="true" class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d={icons[i.icon]} /></svg>
+          </span>
+          <h3 class="mt-4 text-lg font-semibold">{i.title}</h3>
+          <p class="mt-2 text-muted">{i.text}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
